@@ -1,0 +1,125 @@
+/* Base styles for all devices */
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.welcome {
+  color: #3e8e41;
+  font-size: 4em;
+  animation: blinker 5s linear infinite;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+}
+
+#inputWords {
+  width: 60%;
+  max-width: 600px;
+  height: 200px;
+  padding: 10px;
+  resize: vertical;
+  font-size: 1.5em;
+  display: block;
+  margin: 20px auto;
+}
+
+.dropDown {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 2px;
+}
+
+.dropDownContent {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropDown:hover .dropDownContent {
+  display: block;
+  
+}
+
+.text {
+  width: 60%;
+  max-width: 600px;
+  background-color: rgb(29, 29, 27);
+  color: white;
+  padding: 10px;
+  font-size: 1em;
+  word-wrap: break-word;
+  margin: 20px auto;
+  margin-top: 5%;
+}
+
+.copy {
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  display: block;
+  margin: 10px auto;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Media Queries for Responsive Design */
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+  .welcome {
+    font-size: 2.5em;
+  }
+  #inputWords {
+    width: 90%;
+    height: 150px;
+  }
+  .text {
+    width: 90%;
+    font-size: 1em;
+    margin-top: 40%;
+  }
+  .dropbtn {
+    width: 150px;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #inputWords {
+    width: 80%;
+    height: 180px;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1025px) {
+  .welcome {
+    font-size: 3em;
+  }
+}

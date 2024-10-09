@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="welcome">Hi, Sort Words Here</div>
+
+  <!-- Input field for words -->
+  <label for="text">
+    <textarea id="inputWords" placeholder="Paste your texts here..."></textarea>
+  </label>
+    
+  <!-- Dropdown button -->
+  <div class="dropDown">
+    <button class="dropbtn">Options</button>
+    <div class="dropDownContent">
+      <button onclick="sortWordsByComma()">A - Z Separated by comma</button>
+      <button onclick="sortWordsBySpace()">A - Z Separate by space</button>
+      <button onclick="sortWordsByLineBreak()">A - Z Separate by line break</button>
+      <button onclick="sortWordsByCommadescendingOrder()">Z - A Separated by comma</button>
+      <button onclick="sortWordsByspacedescendingOrder()">Z - A Separated by space</button>
+      <button onclick="sortWordsBybreakdescendingOrder()">Z - A Separated by line break</button>
+    </div>
+  </div>
+
+  <!-- Area to display sorted words -->
+  <div class="text" id="sortedWords"></div>
+
+  <!-- Copy button -->
+  <button class="copy" onclick="copyText()">
+    <i class="fa fa-copy"></i>
+  </button>
+
+  <script src="test.js"></script>
+</body>
+</html>
